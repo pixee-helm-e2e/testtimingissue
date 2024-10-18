@@ -109,7 +109,7 @@ public class LabelAndHintIntegrationTest extends IntegrationTest {
 
     private Properties getProperties(String lang) {
         Properties prop = null;
-        if (lang == null || lang.equals("")) { lang = ""; } else { lang = "_"+lang; }
+        if (lang == null || "".equals(lang)) { lang = ""; } else { lang = "_"+lang; }
         try (InputStream input = new FileInputStream("src/main/resources/i18n/messages"+lang+".properties")) {
 
             prop = new Properties();
